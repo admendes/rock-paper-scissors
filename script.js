@@ -1,5 +1,3 @@
-console.log("hello woreld")
-
 let options = ["ROCK", "PAPER", "SCISSORS"];
 
 function computerPlay() {
@@ -34,16 +32,30 @@ function wordInArray(arr, word) {
     return (arr.indexOf(word.toUpperCase()) > -1);
 }
 
-function indexOfChoice(arr, word) {
-    return arr.indexOf(word.toUpperCase());
-}
-
 function game(){
     let score = 0;
+    const container = document.querySelector('#container');
+    const results = document.createElement('div');
+    results.classList.add('results');
+    results.textContent = 'This is the glorious text-content!';
+    container.appendChild(results);
+
     for (let i=1; i <= 5; i++) {
         let result = prompt(`Round ${i}!`, "Rock, Paper or Scissors!");
-        console.log(playRound(result, computerPlay()));
+        results.textContent = playRound(result, computerPlay());
     }
+
 }
 
-game();
+document.getElementById("play").addEventListener("click", game);
+
+/** 
+const container = document.querySelector('#container');
+
+const content = document.createElement('div');
+content.classList.add('content');
+content.textContent = 'This is the glorious text-content!';
+
+container.appendChild(content);
+*/
+//game();
