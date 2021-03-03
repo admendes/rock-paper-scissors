@@ -1,0 +1,42 @@
+h3 {
+   text-align: center;
+}
+
+#bottom {
+   text-align: center;
+}
+
+.hidden {
+   display: none;
+}
+
+.show {
+   display: inline;
+}
+
+
+.choice {
+   height: 50%;
+   width: 50%;
+}
+
+.choiceComputer {
+   height: 50%;
+   width: 50%;
+}
+
+.choice:hover {
+   filter: invert(55%) sepia(23%) saturate(7274%) hue-rotate(160deg) brightness(93%) contrast(101%) !important;
+}
+
+.controls {
+   margin: auto;
+   padding: 60px;
+   height: 200px;
+   display: flex;
+}
+
+
+.push {
+   margin-left: auto;
+}

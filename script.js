@@ -9,6 +9,34 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toUpperCase();
+    if (round > 10){ 
+        toggleButton();
+        if (playerScore > computerScore) {
+            return `Final score: ${playerScore} - ${computerScore} YOU WIN!`
+        }
+        else if (playerScore < computerScore) {
+            return `Final score: ${playerScore} - ${computerScore} YOU LOSE...`
+        }
+        return `Final score: ${playerScore} - ${computerScore} YOU TIED!`
+    }
+
+    document.getElementById("rockComputer").style.filter= "none";
+    document.getElementById("paperComputer").style.filter= "none";
+    document.getElementById("scissorsComputer").style.filter= "none";
+
+    if (computerSelection == "ROCK") {
+        document.getElementById("rockComputer").style.filter= "invert(55%) sepia(23%) saturate(7274%) hue-rotate(160deg) brightness(93%) contrast(101%)";
+
+    }
+    else if (computerSelection == "PAPER") {
+        document.getElementById("paperComputer").style.filter= "invert(55%) sepia(23%) saturate(7274%) hue-rotate(160deg) brightness(93%) contrast(101%)";
+
+    }
+    else {
+        document.getElementById("scissorsComputer").style.filter= "invert(55%) sepia(23%) saturate(7274%) hue-rotate(160deg) brightness(93%) contrast(101%)";
+
+    }
+
     // Invalid option
     if (!wordInArray(options ,playerSelection)) {
         return "Please choose either Rock, Paper or Scissors!";
@@ -36,7 +64,10 @@ function wordInArray(arr, word) {
 }
 
 function game(playerSelection){
-    
+    document.getElementById("rock").style.filter= "none";
+    document.getElementById("paper").style.filter= "none";
+    document.getElementById("scissors").style.filter= "none";
+
     /*const container = document.querySelector('#container');
     const results = document.createElement('div');
     results.classList.add('results');
@@ -47,9 +78,7 @@ function game(playerSelection){
     //results.classList.add('results');
     results.textContent = playRound(playerSelection, computerPlay());
 
-    for (let i=1; i <= 5; i++) {
-        //let result = prompt(`Round ${i}!`, "Rock, Paper or Scissors!");
-    }
+    document.getElementById(playerSelection).style.filter= "invert(55%) sepia(23%) saturate(7274%) hue-rotate(160deg) brightness(93%) contrast(101%)";
 
 }
 
@@ -59,6 +88,14 @@ function reset() {
     round = 1;
     const results = document.querySelector('#results');
     results.textContent = "Clear!";
+}
+
+function refreshPage() {
+    window.location.reload();
+}
+
+function toggleButton() {
+    document.getElementById("reset").className = 'show'; 
 }
 
 //document.getElementById("play").addEventListener("click", game);
