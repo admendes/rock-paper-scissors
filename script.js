@@ -25,15 +25,15 @@ function playRound(playerSelection, computerSelection) {
     document.getElementById("scissorsComputer").style.filter= "none";
 
     if (computerSelection == "ROCK") {
-        document.getElementById("rockComputer").style.filter= "invert(55%) sepia(23%) saturate(7274%) hue-rotate(160deg) brightness(93%) contrast(101%)";
+        document.getElementById("rockComputer").style.filter= "invert(19%) sepia(100%) saturate(7499%) hue-rotate(360deg) brightness(111%) contrast(114%)";
 
     }
     else if (computerSelection == "PAPER") {
-        document.getElementById("paperComputer").style.filter= "invert(55%) sepia(23%) saturate(7274%) hue-rotate(160deg) brightness(93%) contrast(101%)";
+        document.getElementById("paperComputer").style.filter= "invert(19%) sepia(100%) saturate(7499%) hue-rotate(360deg) brightness(111%) contrast(114%)";
 
     }
     else {
-        document.getElementById("scissorsComputer").style.filter= "invert(55%) sepia(23%) saturate(7274%) hue-rotate(160deg) brightness(93%) contrast(101%)";
+        document.getElementById("scissorsComputer").style.filter= "invert(19%) sepia(100%) saturate(7499%) hue-rotate(360deg) brightness(111%) contrast(114%)";
 
     }
 
@@ -78,7 +78,7 @@ function game(playerSelection){
     //results.classList.add('results');
     results.textContent = playRound(playerSelection, computerPlay());
 
-    document.getElementById(playerSelection).style.filter= "invert(55%) sepia(23%) saturate(7274%) hue-rotate(160deg) brightness(93%) contrast(101%)";
+    document.getElementById(playerSelection).style.filter= "invert(73%) sepia(76%) saturate(5860%) hue-rotate(89deg) brightness(124%) contrast(121%)";
 
 }
 

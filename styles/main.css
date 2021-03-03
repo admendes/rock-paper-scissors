@@ -1,5 +1,14 @@
+body {
+   color: rgb(226, 215, 215);
+   background-color: rgb(67, 71, 71);
+   font-family: monaco, Consolas, Lucida Console, monospace; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
+   font-size: 16px;
+   min-width: 600px;
+}
+
 h3 {
    text-align: center;
+   font-size: 32px;
 }
 
 #bottom {
@@ -36,7 +45,19 @@ h3 {
    display: flex;
 }
 
-
 .push {
    margin-left: auto;
+}
+
+button {
+   background-color: #4c56af;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 25px 2px;
+   cursor: pointer;
 }
